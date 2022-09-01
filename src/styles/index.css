@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Reggae+One&display=swap');
+
+:root {
+  /* font-family */
+  --font-lato: 'Lato', sans-serif;
+
+  /* color */
+  --color-primary: blue;
+  --color-secundary: rgb(1, 1, 126);
+  --color-terciary: rgb(1, 69, 255);
+  --color-text-primary: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-lato);
+  color: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.container {
+  padding: 3vh 0;
+}
+
+.section-title {
+  width: 100%;
+  padding: 0 10px;
+  background-color: var(--color-primary);
+}

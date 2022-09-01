@@ -1,0 +1,114 @@
+/* Teams */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.league-container {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  align-items: center;
+  background-color: var(--color-terciary);
+  height: 30vh;
+}
+
+.league-img {
+  color: aliceblue;
+}
+
+.league-info-container {
+  color: aliceblue;
+}
+
+.league-name {
+  color: aliceblue;
+}
+
+.league-number-teams {
+  color: aliceblue;
+}
+
+/* Teams */
+
+.teams-container {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: stretch;
+}
+
+/* Team */
+
+.team-container {
+  height: 30vh;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.team-container:nth-child(4n-2) {
+  background-color: var(--color-secundary);
+}
+
+.team-container:nth-child(4n-1) {
+  background-color: var(--color-secundary);
+}
+
+/* .team-container:nth-child(5n) {
+  background-color: blue;
+} */
+
+.button-arrow-right {
+  color: brown;
+}
+
+.team-name {
+  color: brown;
+}
+
+.team-info {
+  color: brown;
+}
+
+/* Team Match */
+
+.team-match-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  color: brown;
+}
+
+.team-match-container:nth-child(even) {
+  background-color: var(--color-secundary);
+}
+
+.home-team .away-team {
+  display: flex;
+  gap: 10px;
+  color: brown;
+}
+
+.home-team-img .away-team-img {
+  color: brown;
+}
+
+.math-team-container {
+  display: flex;
+  gap: 10px;
+}
+
+.home-team-name .away-team-name {
+  color: brown;
+}
+
+.home-team-score .away-team-score {
+  color: brown;
+}
