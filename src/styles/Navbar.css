@@ -13,3 +13,9 @@ ul {
 li {
   list-style: none;
 }
+
+.arrow-back,
+.nav-configurations {
+  padding: 10px;
+  cursor: pointer;
+}

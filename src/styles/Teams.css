@@ -90,13 +90,15 @@
   background-color: var(--color-secundary);
 }
 
-.home-team .away-team {
+.home-team,
+.away-team {
   display: flex;
   gap: 10px;
   color: brown;
 }
 
-.home-team-img .away-team-img {
+.home-team-img,
+.away-team-img {
   color: brown;
 }
 
@@ -105,10 +107,12 @@
   gap: 10px;
 }
 
-.home-team-name .away-team-name {
+.home-team-name,
+.away-team-name {
   color: brown;
 }
 
-.home-team-score .away-team-score {
+.home-team-score,
+.away-team-score {
   color: brown;
 }
