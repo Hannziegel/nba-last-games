@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import '../styles/Teams.css';
-import { IoIosArrowDroprightCircle } from 'react-icons/io';
+import { IoArrowForwardCircle } from 'react-icons/io5';
 
 const Team = (props) => {
   const { strTeam, intFormedYear, strTeamBadge } = props;
 
   return (
-    <div className="team-container">
-      <IoIosArrowDroprightCircle className="button-arrow-right" />
+    <NavLink to="/team-last-games" className="team-container">
+      <IoArrowForwardCircle className="button-arrow-right" />
       <img className="team-badge-img" alt="team badge" src={strTeamBadge} />
       <h3 className="team-name">{strTeam}</h3>
       <span className="team-info">{intFormedYear}</span>
-    </div>
+    </NavLink>
   );
 };
 
