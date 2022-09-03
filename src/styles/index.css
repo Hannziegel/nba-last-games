@@ -17,6 +17,7 @@
   padding: 0;
   font-family: var(--font-lato);
   color: var(--color-text-primary);
+  text-decoration: none;
 }
 
 body {

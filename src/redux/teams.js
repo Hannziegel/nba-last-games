@@ -25,6 +25,7 @@ export const teamsSlice = createSlice({
       strTeam: teams.strTeam,
       intFormedYear: teams.intFormedYear,
       strTeamBadge: teams.strTeamBadge,
+      strLeague: teams.strLeague,
     })));
   },
 });
