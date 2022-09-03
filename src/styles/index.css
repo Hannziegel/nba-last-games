@@ -5,9 +5,9 @@
   --font-lato: 'Lato', sans-serif;
 
   /* color */
-  --color-primary: blue;
-  --color-secundary: rgb(1, 1, 126);
-  --color-terciary: rgb(1, 69, 255);
+  --color-primary: rgb(29, 66, 168);
+  --color-secundary: rgb(200, 16, 46);
+  --color-terciary: #fff;
   --color-text-primary: #fff;
 }
 

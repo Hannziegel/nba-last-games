@@ -23,11 +23,15 @@
 }
 
 .league-name {
-  color: aliceblue;
+  text-shadow: 1px 1px 2px black;
+  color: var(--color-secundary);
+  font-size: 7rem;
 }
 
 .league-number-teams {
-  color: aliceblue;
+  text-shadow: 1px 1px 2px black;
+  color: var(--color-primary);
+  font-size: 3rem;
 }
 
 /* Teams */
@@ -43,7 +47,6 @@
 
 .team-container {
   position: relative;
-  height: 30vh;
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
@@ -60,10 +63,6 @@
   background-color: var(--color-secundary);
 }
 
-/* .team-container:nth-child(5n) {
-  background-color: blue;
-} */
-
 .team-badge-img {
   width: 20vw;
   height: 20vw;
@@ -79,22 +78,45 @@
 }
 
 .team-name {
-  color: brown;
+  color: var(--color-text-primary);
+  text-shadow: 1px 1px 2px black;
+  font-size: 2rem;
 }
 
 .team-info {
-  color: brown;
+  color: var(--color-text-primary);
+  text-shadow: 1px 1px 2px black;
+  font-size: 1.5rem;
 }
 
 /* Team Match */
+
+.team-matches-container {
+  padding: 3vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  background-color: white;
+}
+
+.team-match-thumb {
+  width: 100%;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .team-match-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
-  width: 100%;
-  color: brown;
+  gap: 10px;
+  background-color: rgba(56, 56, 56, 0.486);
+  border-radius: 12px;
 }
 
 .team-match-container:nth-child(even) {
@@ -105,25 +127,23 @@
 .away-team {
   display: flex;
   gap: 10px;
-  color: brown;
 }
 
-.home-team-img,
-.away-team-img {
-  color: brown;
-}
-
-.math-team-container {
+.match-team-info {
   display: flex;
+  width: 30vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  padding: 10px;
 }
 
 .home-team-name,
-.away-team-name {
-  color: brown;
-}
-
+.away-team-name,
 .home-team-score,
-.away-team-score {
-  color: brown;
+.away-team-score,
+.vs {
+  text-shadow: 1px 1px 2px black;
+  font-size: larger;
 }
