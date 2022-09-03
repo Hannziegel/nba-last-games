@@ -6,8 +6,8 @@ const initialState = [];
 
 export const getTeamLastGame = createAsyncThunk(
   GET_TEAM_LAST_GAME,
-  async () => {
-    const response = await fetch('https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id=134880');
+  async (idTeam) => {
+    const response = await fetch(`https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id=${idTeam}`);
     if (response.ok) {
       return response.json();
     }

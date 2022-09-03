@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Header from './Header';
 import TeamMatch from './TeamMatch';
 import '../styles/Teams.css';
-import { getTeamLastGame } from '../redux/teamLastGames';
 
 const TeamLastGames = () => {
   const teamLastGamesList = useSelector((state) => state.teamLastGames);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (!teamLastGamesList.length) dispatch(getTeamLastGame());
-  }, []);
 
   return (
     <div className="team-match-page container">

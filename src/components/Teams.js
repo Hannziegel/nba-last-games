@@ -24,6 +24,7 @@ const Teams = () => {
               strTeam={team.strTeam}
               intFormedYear={team.intFormedYear}
               strTeamBadge={team.strTeamBadge}
+              idTeam={team.idTeam}
             />
           ))
         }

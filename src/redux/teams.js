@@ -24,6 +24,7 @@ export const teamsSlice = createSlice({
     builder.addCase(getTeams.fulfilled, (state, action) => action.payload
       .teams
       .map((teams) => ({
+        idTeam: teams.idTeam,
         strTeam: teams.strTeam,
         intFormedYear: teams.intFormedYear,
         strTeamBadge: teams.strTeamBadge,
