@@ -21,11 +21,13 @@ export const teamsSlice = createSlice({
   reducers: {
   },
   extraReducers: (builder) => {
-    builder.addCase(getTeams.fulfilled, (state, action) => action.payload.teams.map((teams) => ({
-      strTeam: teams.strTeam,
-      intFormedYear: teams.intFormedYear,
-      strTeamBadge: teams.strTeamBadge,
-      strLeague: teams.strLeague,
-    })));
+    builder.addCase(getTeams.fulfilled, (state, action) => action.payload
+      .teams
+      .map((teams) => ({
+        strTeam: teams.strTeam,
+        intFormedYear: teams.intFormedYear,
+        strTeamBadge: teams.strTeamBadge,
+        strLeague: teams.strLeague,
+      })));
   },
 });

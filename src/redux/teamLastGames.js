@@ -21,6 +21,16 @@ export const teamLastGamesSlice = createSlice({
   reducers: {
   },
   extraReducers: (builder) => {
-    builder.addCase(getTeamLastGame.fulfilled, (state, action) => action.payload);
+    builder.addCase(getTeamLastGame.fulfilled, (state, action) => action.payload
+      .results
+      .map((teamLastGames) => ({
+        idEvent: teamLastGames.idEvent,
+        strEvent: teamLastGames.strEvent,
+        strHomeTeam: teamLastGames.strHomeTeam,
+        intHomeScore: teamLastGames.intHomeScore,
+        strAwayTeam: teamLastGames.strAwayTeam,
+        intAwayScore: teamLastGames.intAwayScore,
+        strThumb: teamLastGames.strThumb,
+      })));
   },
 });
