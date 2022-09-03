@@ -147,3 +147,8 @@
   text-shadow: 1px 1px 2px black;
   font-size: larger;
 }
+
+.searchBar {
+  padding: 10px;
+  color: black;
+}
