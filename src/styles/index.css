@@ -29,6 +29,10 @@ body {
 
 .section-title {
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 8vw;
   background-color: var(--color-primary);
+}
+
+.league-img {
+  width: 30vw;
 }

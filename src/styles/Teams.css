@@ -42,6 +42,7 @@
 /* Team */
 
 .team-container {
+  position: relative;
   height: 30vh;
   background-color: var(--color-primary);
   display: flex;
@@ -63,8 +64,18 @@
   background-color: blue;
 } */
 
+.team-badge-img {
+  width: 20vw;
+  height: 20vw;
+  align-self: flex-start;
+  margin-left: 15vw;
+}
+
 .button-arrow-right {
-  color: brown;
+  position: absolute;
+  top: 3vw;
+  width: 5vw;
+  height: 5vw;
 }
 
 .team-name {
