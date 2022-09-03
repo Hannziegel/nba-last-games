@@ -5,6 +5,7 @@ import '../styles/Teams.css';
 import { IoArrowForwardCircle } from 'react-icons/io5';
 
 const Team = (props) => {
+  const sinceText = 'Since ';
   const { strTeam, intFormedYear, strTeamBadge } = props;
 
   return (
@@ -12,7 +13,10 @@ const Team = (props) => {
       <IoArrowForwardCircle className="button-arrow-right" />
       <img className="team-badge-img" alt="team badge" src={strTeamBadge} />
       <h3 className="team-name">{strTeam}</h3>
-      <span className="team-info">{intFormedYear}</span>
+      <span className="team-info">
+        {sinceText}
+        {intFormedYear}
+      </span>
     </NavLink>
   );
 };
