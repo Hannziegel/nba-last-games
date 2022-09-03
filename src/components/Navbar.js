@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
+import { IoArrowBackCircle, IoSearchCircle } from 'react-icons/io5';
 import '../styles/Navbar.css';
 
 const Navbar = () => (
   <nav className="nav container">
     <div className="arrow-back">
-      <span>&lt;</span>
+      <IoArrowBackCircle className="icon-arrow-back" />
     </div>
     <ul className="nav-ul">
       <li className="nav-li">
@@ -16,7 +17,7 @@ const Navbar = () => (
       </li>
     </ul>
     <div className="nav-configurations">
-      <span>&gt;</span>
+      <IoSearchCircle className="icon-search" />
     </div>
   </nav>
 );
