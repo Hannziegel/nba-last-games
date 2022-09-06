@@ -4,7 +4,7 @@ import TeamMatch from './TeamMatch';
 import '../styles/Teams.css';
 
 const TeamLastGames = () => {
-  const teamLastGamesList = useSelector((state) => state.teamLastGames);
+  const teamLastGamesList = useSelector((state) => state.teamLastGames.teamLastGames);
 
   return (
     <div className="team-match-page container">
@@ -14,12 +14,7 @@ const TeamLastGames = () => {
           teamLastGamesList.map((teamLastGames) => (
             <TeamMatch
               key={teamLastGames.idEvent}
-              strEvent={teamLastGames.strEvent}
-              strHomeTeam={teamLastGames.strHomeTeam}
-              intHomeScore={teamLastGames.intHomeScore}
-              strAwayTeam={teamLastGames.strAwayTeam}
-              intAwayScore={teamLastGames.intAwayScore}
-              strThumb={teamLastGames.strThumb}
+              teamLastGames={teamLastGames}
             />
           ))
         }
