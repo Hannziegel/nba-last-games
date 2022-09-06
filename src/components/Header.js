@@ -3,7 +3,7 @@ import nbalogo from '../assets/imgs/nba-logo-2.png';
 
 const Header = () => {
   const teamStr = ' Teams';
-  let teamsList = useSelector((state) => state.teams);
+  let teamsList = useSelector((state) => state.teams.teams);
   if (!teamsList.length) {
     teamsList = [{ strLeague: 'error' }];
   }

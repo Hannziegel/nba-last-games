@@ -2,7 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const GET_TEAM_LAST_GAME = 'react-capstone/GET_TEAM_LAST_GAME';
 
-const initialState = [];
+const initialState = {
+  teamLastGames: [],
+  lifecycle: 'initial',
+};
 
 export const getTeamLastGame = createAsyncThunk(
   GET_TEAM_LAST_GAME,
@@ -21,16 +24,18 @@ export const teamLastGamesSlice = createSlice({
   reducers: {
   },
   extraReducers: (builder) => {
-    builder.addCase(getTeamLastGame.fulfilled, (state, action) => action.payload
-      .results
-      .map((teamLastGames) => ({
-        idEvent: teamLastGames.idEvent,
-        strEvent: teamLastGames.strEvent,
-        strHomeTeam: teamLastGames.strHomeTeam,
-        intHomeScore: teamLastGames.intHomeScore,
-        strAwayTeam: teamLastGames.strAwayTeam,
-        intAwayScore: teamLastGames.intAwayScore,
-        strThumb: teamLastGames.strThumb,
-      })));
+    builder
+      .addCase(getTeamLastGame.fulfilled, (state, action) => ({
+        lifecycle: { loading: 'initial' },
+        teamLastGames: action.payload.results,
+      }))
+      .addCase(getTeamLastGame.pending, (state) => ({
+        ...state,
+        lifecycle: { loading: 'pending' },
+      }))
+      .addCase(getTeamLastGame.rejected, (state) => ({
+        ...state,
+        lifecycle: { loading: 'rejected' },
+      }));
   },
 });

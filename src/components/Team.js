@@ -8,33 +8,33 @@ import { getTeamLastGame } from '../redux/teamLastGames';
 
 const Team = (props) => {
   const sinceText = 'Since ';
-  const {
-    idTeam, strTeam, intFormedYear, strTeamBadge,
-  } = props;
+  const { team } = props;
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(getTeamLastGame(idTeam));
+    dispatch(getTeamLastGame(team.idTeam));
   };
 
   return (
     <NavLink to="/team-last-games" className="team-container" onClick={handleClick}>
       <IoArrowForwardCircle className="button-arrow-right" />
-      <img className="team-badge-img" alt="team badge" src={strTeamBadge} />
-      <h3 className="team-name">{strTeam}</h3>
+      <img className="team-badge-img" alt="team badge" src={team.strTeamBadge} />
+      <h3 className="team-name">{team.strTeam}</h3>
       <span className="team-info">
         {sinceText}
-        {intFormedYear}
+        {team.intFormedYear}
       </span>
     </NavLink>
   );
 };
 
 Team.propTypes = {
-  idTeam: PropTypes.string.isRequired,
-  strTeam: PropTypes.string.isRequired,
-  intFormedYear: PropTypes.string.isRequired,
-  strTeamBadge: PropTypes.string.isRequired,
+  team: PropTypes.shape({
+    idTeam: PropTypes.string,
+    strTeam: PropTypes.string,
+    intFormedYear: PropTypes.string,
+    strTeamBadge: PropTypes.string,
+  }).isRequired,
 };
 
 export default Team;

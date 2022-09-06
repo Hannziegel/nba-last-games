@@ -6,7 +6,7 @@ import Header from './Header';
 import '../styles/Teams.css';
 
 const Teams = () => {
-  const teamsList = useSelector((state) => state.teams);
+  const teamsList = useSelector((state) => state.teams.teams);
   const dispatch = useDispatch();
   useEffect(() => {
     if (!teamsList.length) dispatch(getTeams());
@@ -21,10 +21,7 @@ const Teams = () => {
           teamsList.map((team) => (
             <Team
               key={team.strTeam}
-              strTeam={team.strTeam}
-              intFormedYear={team.intFormedYear}
-              strTeamBadge={team.strTeamBadge}
-              idTeam={team.idTeam}
+              team={team}
             />
           ))
         }

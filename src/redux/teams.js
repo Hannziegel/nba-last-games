@@ -2,7 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const GET_TEAMS = 'react-capstone/GET_TEAMS';
 
-const initialState = [];
+const initialState = {
+  teams: [],
+  lifecycle: { loading: 'initial' },
+};
 
 export const getTeams = createAsyncThunk(
   GET_TEAMS,
@@ -18,17 +21,20 @@ export const getTeams = createAsyncThunk(
 export const teamsSlice = createSlice({
   name: 'teams',
   initialState,
-  reducers: {
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getTeams.fulfilled, (state, action) => action.payload
-      .teams
-      .map((teams) => ({
-        idTeam: teams.idTeam,
-        strTeam: teams.strTeam,
-        intFormedYear: teams.intFormedYear,
-        strTeamBadge: teams.strTeamBadge,
-        strLeague: teams.strLeague,
-      })));
+    builder
+      .addCase(getTeams.fulfilled, (state, action) => ({
+        teams: action.payload.teams,
+        lifecycle: { loading: 'initial' },
+      }))
+      .addCase(getTeams.pending, (state) => ({
+        ...state,
+        lifecycle: { loading: 'pending' },
+      }))
+      .addCase(getTeams.rejected, (state) => ({
+        ...state,
+        lifecycle: { loading: 'rejected' },
+      }));
   },
 });
