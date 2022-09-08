@@ -1,45 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTeams } from '../redux/teams';
 import Team from './Team';
 import Header from './Header';
 import '../styles/Teams.css';
 
-const Teams = () => (
-  <div className="page-container container">
-    <Header />
-    <div className="section-title">Teams in NBA</div>
-    <div className="teams-container">
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
-      <Team />
+const Teams = () => {
+  const teamsList = useSelector((state) => state.teams.teams);
+  const [search, setSearch] = useState('');
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (!teamsList.length) dispatch(getTeams());
+  }, []);
+
+  const filterTeams = teamsList.filter(
+    (teams) => !search || new RegExp(search.toLowerCase(), '').test(teams.strTeam.toLowerCase()),
+  );
+
+  return (
+    <div className="page-container container">
+      <Header />
+      <div className="section-title">Teams in NBA</div>
+      <input type="search" value={search} onChange={(event) => { setSearch(event.target.value); }} className="searchBar" placeholder="Search..." />
+      <div className="teams-container">
+        {
+          filterTeams.map((team) => (
+            <Team
+              key={team.strTeam}
+              team={team}
+            />
+          ))
+        }
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Teams;

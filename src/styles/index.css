@@ -5,9 +5,9 @@
   --font-lato: 'Lato', sans-serif;
 
   /* color */
-  --color-primary: blue;
-  --color-secundary: rgb(1, 1, 126);
-  --color-terciary: rgb(1, 69, 255);
+  --color-primary: rgb(29, 66, 168);
+  --color-secundary: rgb(200, 16, 46);
+  --color-terciary: #fff;
   --color-text-primary: #fff;
 }
 
@@ -17,6 +17,7 @@
   padding: 0;
   font-family: var(--font-lato);
   color: var(--color-text-primary);
+  text-decoration: none;
 }
 
 body {
@@ -29,6 +30,10 @@ body {
 
 .section-title {
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 8vw;
   background-color: var(--color-primary);
+}
+
+.league-img {
+  width: 30vw;
 }

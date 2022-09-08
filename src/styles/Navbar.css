@@ -19,3 +19,9 @@ li {
   padding: 10px;
   cursor: pointer;
 }
+
+.icon-arrow-back,
+.icon-search {
+  width: 5vw;
+  height: 5vw;
+}
