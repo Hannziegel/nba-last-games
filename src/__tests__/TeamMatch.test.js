@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
-import store from '../Redux/configureStore';
+import store from '../Redux/configureStore'; // eslint-disable-line
 import TeamMatch from '../components/TeamMatch';
 
 describe('App js testing', () => {
