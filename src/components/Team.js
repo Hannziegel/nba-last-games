@@ -16,7 +16,7 @@ const Team = (props) => {
   };
 
   return (
-    <NavLink to="/team-last-games" className="team-container" onClick={handleClick}>
+    <NavLink to={`/${team.strTeam}`} className="team-container" onClick={handleClick}>
       <IoArrowForwardCircle className="button-arrow-right" />
       <img className="team-badge-img" alt="team badge" src={team.strTeamBadge} />
       <h3 className="team-name">{team.strTeam}</h3>

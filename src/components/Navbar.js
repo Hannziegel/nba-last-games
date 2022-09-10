@@ -1,21 +1,17 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
-import { IoArrowBackCircle, IoSearchCircle } from 'react-icons/io5';
+import { NavLink, useLocation } from 'react-router-dom';
+import { IoArrowBackCircle } from 'react-icons/io5';
+import nbalogo from '../assets/imgs/nba-logo-2.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => (
   <nav className="nav container">
-    <NavLink to="/teams" className="arrow-back">
-      <IoArrowBackCircle className="icon-arrow-back" />
-    </NavLink>
-    <ul className="nav-ul">
-      <li className="nav-li">
-        <NavLink to="/teams">TEAMS</NavLink>
-      </li>
-    </ul>
     <div className="nav-configurations">
-      <IoSearchCircle className="icon-search" />
+      <img className="league-img" alt="League" src={nbalogo} />
     </div>
+    <NavLink to="/teams" className="arrow-back">
+      {useLocation().pathname === '/teams' ? 'Teams' : <IoArrowBackCircle className="icon-arrow-back" />}
+    </NavLink>
   </nav>
 );
 

@@ -4,11 +4,29 @@
   /* font-family */
   --font-lato: 'Lato', sans-serif;
 
+  /* font-size */
+  --font-size-larger: 7rem;
+  --font-size-large: 5rem;
+  --font-size-medium: 1.75rem;
+  --font-size-small: 1.25rem;
+  --font-size-smaller: 0.9rem;
+
   /* color */
   --color-primary: rgb(29, 66, 168);
   --color-secundary: rgb(200, 16, 46);
   --color-terciary: #fff;
   --color-text-primary: #fff;
+
+  /* icon size */
+  --icon-size-large: 8vw;
+  --icon-size-med: 6vw;
+  --icon-size-small: 1vw;
+
+  /* img size */
+  --img-size-larger: 30vw;
+  --img-size-large: 20vw;
+  --img-size-med: 120px;
+  --img-size-small: 15vw;
 }
 
 * {
@@ -18,22 +36,50 @@
   font-family: var(--font-lato);
   color: var(--color-text-primary);
   text-decoration: none;
+  transition-duration: 0.5s;
+  overflow-x: hidden;
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-terciary);
 }
 
 .container {
-  padding: 3vh 0;
+  padding: 1vw 0;
+  width: 100%;
 }
 
 .section-title {
   width: 100%;
   padding: 10px 8vw;
   background-color: var(--color-primary);
+  font-size: medium;
+  text-align: center;
 }
 
 .league-img {
-  width: 30vw;
+  width: var(--img-size-med);
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /* font-size */
+    --font-size-medium: 2.5rem;
+    --font-size-small: 2rem;
+    --font-size-smaller: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    /* font-size */
+    --font-size-medium: 3.5rem;
+    --font-size-small: 2.5rem;
+    --font-size-smaller: 2rem;
+  }
 }

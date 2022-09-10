@@ -1,16 +1,14 @@
 import { useSelector } from 'react-redux';
-import nbalogo from '../assets/imgs/nba-logo-2.png';
 
 const Header = () => {
   const teamStr = ' Teams';
   let teamsList = useSelector((state) => state.teams.teams);
   if (!teamsList.length) {
-    teamsList = [{ strLeague: 'error' }];
+    teamsList = [{ strLeague: 'Loading' }];
   }
 
   return (
     <div className="league-container">
-      <img className="league-img" alt="League" src={nbalogo} />
       <div className="league-info-container">
         <h2 className="league-name">
           {teamsList[0].strLeague}

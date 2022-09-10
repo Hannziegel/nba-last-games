@@ -11,18 +11,13 @@ Object {
         <div
           class="league-container"
         >
-          <img
-            alt="League"
-            class="league-img"
-            src="nba-logo-2.png"
-          />
           <div
             class="league-info-container"
           >
             <h2
               class="league-name"
             >
-              error
+              Loading
             </h2>
             <p
               class="league-number-teams"
@@ -45,18 +40,13 @@ Object {
       <div
         class="league-container"
       >
-        <img
-          alt="League"
-          class="league-img"
-          src="nba-logo-2.png"
-        />
         <div
           class="league-info-container"
         >
           <h2
             class="league-name"
           >
-            error
+            Loading
           </h2>
           <p
             class="league-number-teams"

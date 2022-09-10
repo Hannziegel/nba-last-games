@@ -8,6 +8,15 @@ Object {
       <nav
         class="nav container"
       >
+        <div
+          class="nav-configurations"
+        >
+          <img
+            alt="League"
+            class="league-img"
+            src="nba-logo-2.png"
+          />
+        </div>
         <a
           class="arrow-back"
           href="/teams"
@@ -27,43 +36,6 @@ Object {
             />
           </svg>
         </a>
-        <ul
-          class="nav-ul"
-        >
-          <li
-            class="nav-li"
-          >
-            <a
-              class=""
-              href="/teams"
-            >
-              TEAMS
-            </a>
-          </li>
-        </ul>
-        <div
-          class="nav-configurations"
-        >
-          <svg
-            class="icon-search"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
-            />
-            <circle
-              cx="232"
-              cy="232"
-              r="56"
-            />
-          </svg>
-        </div>
       </nav>
       <div
         class="page-container container"
@@ -71,18 +43,13 @@ Object {
         <div
           class="league-container"
         >
-          <img
-            alt="League"
-            class="league-img"
-            src="nba-logo-2.png"
-          />
           <div
             class="league-info-container"
           >
             <h2
               class="league-name"
             >
-              error
+              Loading
             </h2>
             <p
               class="league-number-teams"
@@ -92,11 +59,6 @@ Object {
             </p>
           </div>
         </div>
-        <div
-          class="section-title"
-        >
-          Teams in NBA
-        </div>
         <input
           class="searchBar"
           placeholder="Search..."
@@ -104,7 +66,7 @@ Object {
           value=""
         />
         <div
-          class="teams-container"
+          class="teams-container container"
         />
       </div>
     </div>
@@ -113,6 +75,15 @@ Object {
     <nav
       class="nav container"
     >
+      <div
+        class="nav-configurations"
+      >
+        <img
+          alt="League"
+          class="league-img"
+          src="nba-logo-2.png"
+        />
+      </div>
       <a
         class="arrow-back"
         href="/teams"
@@ -132,43 +103,6 @@ Object {
           />
         </svg>
       </a>
-      <ul
-        class="nav-ul"
-      >
-        <li
-          class="nav-li"
-        >
-          <a
-            class=""
-            href="/teams"
-          >
-            TEAMS
-          </a>
-        </li>
-      </ul>
-      <div
-        class="nav-configurations"
-      >
-        <svg
-          class="icon-search"
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 512 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
-          />
-          <circle
-            cx="232"
-            cy="232"
-            r="56"
-          />
-        </svg>
-      </div>
     </nav>
     <div
       class="page-container container"
@@ -176,18 +110,13 @@ Object {
       <div
         class="league-container"
       >
-        <img
-          alt="League"
-          class="league-img"
-          src="nba-logo-2.png"
-        />
         <div
           class="league-info-container"
         >
           <h2
             class="league-name"
           >
-            error
+            Loading
           </h2>
           <p
             class="league-number-teams"
@@ -197,11 +126,6 @@ Object {
           </p>
         </div>
       </div>
-      <div
-        class="section-title"
-      >
-        Teams in NBA
-      </div>
       <input
         class="searchBar"
         placeholder="Search..."
@@ -209,7 +133,7 @@ Object {
         value=""
       />
       <div
-        class="teams-container"
+        class="teams-container container"
       />
     </div>
   </div>,
