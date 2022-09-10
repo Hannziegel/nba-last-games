@@ -14,15 +14,15 @@ const Teams = () => {
   }, []);
 
   const filterTeams = teamsList.filter(
-    (teams) => !search || new RegExp(search.toLowerCase(), '').test(teams.strTeam.toLowerCase()),
+    (teams) => !search || new RegExp(search.toLowerCase()).test(teams.strTeam.toLowerCase()),
   );
 
   return (
     <div className="page-container container">
       <Header />
-      <div className="section-title">Teams in NBA</div>
+      {/*       <div className="section-title">TEAMS IN NBA</div> */}
       <input type="search" value={search} onChange={(event) => { setSearch(event.target.value); }} className="searchBar" placeholder="Search..." />
-      <div className="teams-container">
+      <div className="teams-container container">
         {
           filterTeams.map((team) => (
             <Team

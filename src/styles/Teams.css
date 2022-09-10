@@ -7,11 +7,9 @@
 
 .league-container {
   display: flex;
+  padding-top: 90px;
   justify-content: center;
-  gap: 10vw;
   align-items: center;
-  background-color: var(--color-terciary);
-  height: 30vh;
 }
 
 .league-img {
@@ -19,19 +17,22 @@
 }
 
 .league-info-container {
-  color: aliceblue;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
 }
 
 .league-name {
   text-shadow: 1px 1px 2px black;
   color: var(--color-secundary);
-  font-size: 7rem;
+  font-size: var(--font-size-large);
 }
 
 .league-number-teams {
   text-shadow: 1px 1px 2px black;
   color: var(--color-primary);
-  font-size: 3rem;
+  font-size: 5vw;
 }
 
 /* Teams */
@@ -41,6 +42,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: stretch;
+  padding: 0 2vw;
 }
 
 /* Team */
@@ -52,7 +54,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 10px;
+  gap: 4px;
+  padding: 20px;
 }
 
 .team-container:nth-child(4n-2) {
@@ -64,39 +67,40 @@
 }
 
 .team-badge-img {
-  width: 20vw;
-  height: 20vw;
+  width: var(--img-size-large);
+  height: var(--img-size-large);
   align-self: flex-start;
-  margin-left: 15vw;
+  margin-left: 2vw;
 }
 
 .button-arrow-right {
   position: absolute;
   top: 3vw;
-  width: 5vw;
-  height: 5vw;
+  right: 3vw;
+  width: var(--icon-size-med);
+  height: var(--icon-size-med);
 }
 
 .team-name {
   color: var(--color-text-primary);
   text-shadow: 1px 1px 2px black;
-  font-size: 2rem;
+  font-size: var(--font-size-small);
+  text-align: right;
 }
 
 .team-info {
   color: var(--color-text-primary);
   text-shadow: 1px 1px 2px black;
-  font-size: 1.5rem;
+  font-size: var(--font-size-smaller);
 }
 
 /* Team Match */
 
 .team-matches-container {
-  padding: 3vh 0;
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  background-color: white;
+  overflow: hidden;
 }
 
 .team-match-thumb {
@@ -108,35 +112,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .team-match-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20px;
   gap: 10px;
-  background-color: rgba(56, 56, 56, 0.486);
-  border-radius: 12px;
-}
-
-.team-match-container:nth-child(even) {
-  background-color: var(--color-secundary);
+  background-color: rgba(56, 56, 56, 0.61);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .home-team,
 .away-team {
   display: flex;
+  padding: 20px;
   gap: 10px;
+  overflow: hidden;
 }
 
 .match-team-info {
   display: flex;
-  width: 30vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .home-team-name,
@@ -145,10 +151,46 @@
 .away-team-score,
 .vs {
   text-shadow: 1px 1px 2px black;
-  font-size: larger;
+  font-size: var(--font-size-small);
 }
 
 .searchBar {
-  padding: 10px;
-  color: black;
+  align-self: center;
+  border: none;
+  outline: 1px solid var(--color-secundary);
+  border-radius: 12px;
+  width: 50vw;
+  padding: 12px 5vw;
+  color: var(--color-secundary);
+  margin: 12px 0;
+}
+
+.searchBar::placeholder {
+  color: var(--color-secundary);
+}
+
+.searchBar:focus {
+  border: none;
+  outline: 2px solid var(--color-secundary);
+}
+
+.team-container:hover,
+.team-match-container:hover,
+.team-match-thumb:hover {
+  transform: scale(1.1);
+  border: 1.5px solid white;
+  box-shadow: 1px 1px 4px 4px white;
+  z-index: 11;
+}
+
+@media screen and (min-width: 768px) {
+  .teams-container {
+    padding: 0 5vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .teams-container {
+    padding: 0 9vw;
+  }
 }
