@@ -7,7 +7,7 @@ Object {
     <div>
       <a
         class="team-container"
-        href="/team-last-games"
+        href="/undefined"
       >
         <svg
           class="button-arrow-right"
@@ -41,7 +41,7 @@ Object {
   "container": <div>
     <a
       class="team-container"
-      href="/team-last-games"
+      href="/undefined"
     >
       <svg
         class="button-arrow-right"
