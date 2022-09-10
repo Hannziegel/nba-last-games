@@ -16,11 +16,11 @@ On this web project you can check every team on the NBA league and the scores an
 
 ## Live Demo
 
- [react-capstone]()
+ [react-capstone](https://zippy-semolina-a01776.netlify.app)
 
  ## Video Preview
 
- [Loom Video]()
+ [Loom Video](https://www.loom.com/share/d33946f954e24d3e807971a5b9eb88ca)
 
  ## Getting Started
 
