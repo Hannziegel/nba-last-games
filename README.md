@@ -16,7 +16,7 @@ On this web project you can check every team on the NBA league and the scores an
 
 ## Live Demo
 
- [Free Games DB]()
+ [react-capstone]()
 
  ## Video Preview
 
