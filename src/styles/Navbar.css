@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  background-color: var(--color-primary);
+  z-index: 10;
+  height: 90px;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-title {
+  font-size: var(--font-size-medium);
+}
+
+.arrow-back,
+.nav-configurations {
+  font-size: var(--font-size-small);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-arrow-back,
+.icon-search {
+  width: var(--icon-size-large);
+  max-width: 85px;
+  height: var(--icon-size-large);
+  max-height: 85px;
+}
